@@ -4,17 +4,7 @@
   padding: 2rem;
   text-align: center;
 }
-:root {
-    --green: #60E6D9;
-    --dark-blue: #25699B;
-    --darkest-blue: #160074;
-    --white-blue: #C6F2F8;
-    --light-blue: #A4E7FF;
-    --med-blue: #60BBE7;
-}
-body {
-  background-color: var(--darkest-blue);
-}
+
 .logo {
   height: 6em;
   padding: 1.5em;

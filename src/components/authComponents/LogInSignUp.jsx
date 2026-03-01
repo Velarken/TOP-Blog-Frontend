@@ -11,16 +11,19 @@ export function LogInSignUp({
     const [isSignedUp, setIsSignedUp] = useState(false);
     const [showLogin, setShowLogin] = useState(false);
 
-    function handleScreenSwap() {
-        setShowLogin(!showLogin)
+    function handleShowLogin() {
+        setShowLogin(true)
+    }
+    function handleShowSignup() {
+        setShowLogin(false)
     }
 
 
     return (
         <div className="auth-forms">
             <div className="user-selection">
-                <button onClick={handleScreenSwap} id='loginButton' className={showLogin ? 'selected button' : 'deselected button'}><h1>Log In</h1></button>
-                <button onClick={handleScreenSwap} id='signupButton' className={showLogin ? 'deselected button' : 'selected button'}><h1>Sign Up</h1></button>
+                <button onClick={handleShowLogin} id='loginButton' className={showLogin ? 'selected button' : 'deselected button'}><h1>Log In</h1></button>
+                <button onClick={handleShowSignup} id='signupButton' className={showLogin ? 'deselected button' : 'selected button'}><h1>Sign Up</h1></button>
             </div>
             {showLogin
             ? ( // login form
