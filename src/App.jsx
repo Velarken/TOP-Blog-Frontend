@@ -1,20 +1,34 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { LogInSignUp } from './components/authComponents/LogInSignUp.jsx'
+import LogInSignUp from './components/authComponents/LogInSignUp.jsx'
 import Post from './components/blogPostComponents/Post.jsx'
 import postData from './testData.js'
+import './App.css'
 
-function App() {
+function App({
 
-    const listPosts = postData.map(post => {
-        return <Post key={post.id} data={post} />
-    })
+}) {
+  const [showPosts,setShowPosts] = useState(false)
+  const [showAuth,setShowAuth] = useState(true)
+  const [isLoggedIn,setIsLoggedIn] = useState(true)
+
+  const listPosts = postData.map(post => {
+    return <Post key={post.id} data={post} />
+  })
+
+  // state related functions
+  function handlePostToggle() {
+    setShowPosts(true)
+    setShowAuth(false)
+  }
+  function handleAuthToggle() {
+    setShowAuth(true)
+    setShowPosts(false)
+  }
+
   return (
     <>
-      {/* <LogInSignUp /> */}
-      {listPosts}
+      <LogInSignUp />
+      {/* {listPosts} */}
     </>
   )
 }
