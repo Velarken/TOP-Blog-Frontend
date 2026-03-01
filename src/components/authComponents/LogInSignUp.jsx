@@ -7,8 +7,6 @@ export function LogInSignUp({
 
 }) {
 
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [isSignedUp, setIsSignedUp] = useState(false);
     const [showLogin, setShowLogin] = useState(false);
 
     function handleShowLogin() {
