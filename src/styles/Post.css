@@ -18,7 +18,9 @@
 .post-comments {
     display:flex;
     flex-direction: column;
-    border:2px solid var(--darkest-blue);
+    width:90%;
+    align-items: center;
+    justify-content: center;
 }
 .hidden {
     display:none;
@@ -31,5 +33,7 @@
 .comment-card {
     display:flex;
     flex-direction: column;
+    width:100%;
     border: 2px solid var(--darkest-blue);
+    margin: 1vh 0vh 1vh 0vh;
 }
