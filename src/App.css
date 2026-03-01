@@ -13,7 +13,7 @@
     --med-blue: #60BBE7;
 }
 body {
-  background-color: var(--green);
+  background-color: var(--darkest-blue);
 }
 .logo {
   height: 6em;
