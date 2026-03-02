@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import LogInSignUp from './components/authComponents/LogInSignUp.jsx'
 import Post from './components/blogPostComponents/Post.jsx'
-import postData from './testData.js'
+import {postData} from './testData.js'
 import './App.css'
+import ViewPosts from './components/pages/ViewPosts.jsx'
 
 function App({
 
@@ -11,9 +12,7 @@ function App({
   const [showAuth,setShowAuth] = useState(true)
   const [isLoggedIn,setIsLoggedIn] = useState(true)
 
-  const listPosts = postData.map(post => {
-    return <Post key={post.id} data={post} />
-  })
+  
 
   // state related functions
   function handlePostToggle() {
@@ -27,8 +26,8 @@ function App({
 
   return (
     <>
-      <LogInSignUp />
-      {/* {listPosts} */}
+      {/* <LogInSignUp /> */}
+      <ViewPosts postData={postData} />
     </>
   )
 }
