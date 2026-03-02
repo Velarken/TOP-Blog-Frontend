@@ -1,7 +1,6 @@
 export function Comment({
     data,
 }) {
-    console.table(data)
     return (
         <div className="comment-card">
             <p className="comment-content">
