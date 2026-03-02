@@ -57,4 +57,25 @@
         ]
     }
 ]
-export default postData;
+export const topicList = [
+    {
+        topic: 'Animals',
+        postCount: 5,
+    },
+    {
+        topic: 'Home Life',
+        postCount: 18,
+    },
+    {
+        topic: 'Work Life',
+        postCount: 3.
+    },
+    {
+        topic: 'Advice',
+        postCount: 22,
+    }   
+]
+export default {
+    postData,
+    topicList
+};
