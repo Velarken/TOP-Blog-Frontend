@@ -6,18 +6,15 @@ export function Post({
     data
 }) {
     const [commentsOpen,setCommentsOpen] = useState(false)
+
     const comments = data.comments
+
     const listComments = comments.map(comment => {
-        return (
-            <>
-                <Comment data={comment}/>
-            </>
-        )
+        return <Comment data={comment}/>
     })
     function handleCommentToggle() {
         setCommentsOpen(!commentsOpen)
     }
-    
     return (
         <div className="post-card">
             <div className="post-head">
